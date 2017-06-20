@@ -257,17 +257,4 @@ ntpd (pid  2013) is running...
 
 
 
-The following custom networks are running SSH-accessible Docker containers on this host:
-
-======== network13032 ========
-Hostname             Container name    IP address     RAM usage
-node-1.network13032  fervent_mahavira  192.168.124.2  38.29 MB / 64.43 GB
-node-2.network13032  hungry_brown      192.168.124.3  38.26 MB / 64.43 GB
-
-New release '16.04.2 LTS' available.
-Run 'do-release-upgrade' to upgrade to it.
-
-
-*** System restart required ***
-
 
