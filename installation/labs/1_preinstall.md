@@ -35,6 +35,7 @@ and check to make sure that only the key(s) you wanted were added.
 
 
 2.Check vm.swappiness on all your nodes
+
 Fengs-MacPro:~ feng.xu$ ./runall.sh "sysctl vm.swappiness"
 commandline: ssh root@feng-xu-1.vpc.cloudera.com sysctl vm.swappiness ...
 vm.swappiness = 0
@@ -47,7 +48,9 @@ vm.swappiness = 0
 commandline: ssh root@feng-xu-5.vpc.cloudera.com sysctl vm.swappiness ...
 vm.swappiness = 0
 
+
 3.Show the mount attributes of your volume(s)
+
 Fengs-MacPro:~ feng.xu$ ./runall.sh "mount -v"
 commandline: ssh root@feng-xu-1.vpc.cloudera.com mount -v ...
 /dev/xvda1 on / type ext4 (rw)
@@ -90,7 +93,9 @@ tmpfs on /dev/shm type tmpfs (rw)
 none on /proc/sys/fs/binfmt_misc type binfmt_misc (rw)
 cm_processes on /var/run/cloudera-scm-agent/process type tmpfs (rw,mode=0751)
 
+
 4.If you have ext-based volumes, list the reserve space setting
+
 Fengs-MacPro:~ feng.xu$ ./runall.sh "df -m |grep /dev/xvda1"
 commandline: ssh root@feng-xu-1.vpc.cloudera.com df -m |grep /dev/xvda1 ...
 /dev/xvda1        251855 12711    226348   6% /
@@ -144,7 +149,9 @@ always madvise [never]
 commandline: ssh root@feng-xu-5.vpc.cloudera.com cat /sys/kernel/mm/transparent_hugepage/defrag ...
 always madvise [never]
 
+
 6.List your network interface configuration
+
 Fengs-MacPro:~ feng.xu$ ./runall.sh "ip addr"
 commandline: ssh root@feng-xu-1.vpc.cloudera.com ip addr ...
 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN 
@@ -204,6 +211,7 @@ commandline: ssh root@feng-xu-5.vpc.cloudera.com ip addr ...
 
 
 7.Show that forward and reverse host lookups are correctly resolved
+
 Fengs-MacPro:~ feng.xu$ ./runall.sh "getent hosts"
 commandline: ssh root@feng-xu-1.vpc.cloudera.com getent hosts ...
 127.0.0.1       localhost localhost.localdomain localhost4 localhost4.localdomain4
@@ -228,6 +236,7 @@ Address:	10.17.181.104#53
 Name:	feng-xu-1.vpc.cloudera.com
 Address: 172.28.210.128
 
+
 8.Show the nscd service is running
 
 Fengs-MacPro:~ feng.xu$ ./runall.sh "service nscd status"
@@ -243,6 +252,7 @@ commandline: ssh root@feng-xu-5.vpc.cloudera.com service nscd status ...
 nscd (pid 6284) is running...
 
 9.Show the ntpd service is running
+
 Fengs-MacPro:~ feng.xu$ ./runall.sh "service ntpd status"
 commandline: ssh root@feng-xu-1.vpc.cloudera.com service ntpd status ...
 ntpd (pid  1486) is running...
