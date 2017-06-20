@@ -322,4 +322,26 @@ Spent 1119ms computing partitions.
 real	5m8.958s
 user	0m8.421s
 sys	0m0.345s
+
+[fx185000@feng-xu-1 ~]$ hdfs dfs -ls /user/fx185000/file10GB
+Found 5 items
+-rw-r--r--   3 fx185000 fx185000          0 2017-06-20 11:53 /user/fx185000/file10GB/_SUCCESS
+-rw-r--r--   3 fx185000 fx185000 2684354500 2017-06-20 11:53 /user/fx185000/file10GB/part-m-00000
+-rw-r--r--   3 fx185000 fx185000 2684354500 2017-06-20 11:53 /user/fx185000/file10GB/part-m-00001
+-rw-r--r--   3 fx185000 fx185000 2684354500 2017-06-20 11:53 /user/fx185000/file10GB/part-m-00002
+-rw-r--r--   3 fx185000 fx185000 2684354500 2017-06-20 11:53 /user/fx185000/file10GB/part-m-00003
+
+[fx185000@feng-xu-1 ~]$ hdfs dfs -ls /user/fx185000/file10GBSort
+Found 10 items
+-rw-r--r--   1 fx185000 fx185000          0 2017-06-20 12:07 /user/fx185000/file10GBSort/_SUCCESS
+-rw-r--r--  10 fx185000 fx185000         77 2017-06-20 12:02 /user/fx185000/file10GBSort/_partition.lst
+-rw-r--r--   1 fx185000 fx185000 1341771400 2017-06-20 12:07 /user/fx185000/file10GBSort/part-r-00000
+-rw-r--r--   1 fx185000 fx185000 1321428000 2017-06-20 12:07 /user/fx185000/file10GBSort/part-r-00001
+-rw-r--r--   1 fx185000 fx185000 1344065300 2017-06-20 12:07 /user/fx185000/file10GBSort/part-r-00002
+-rw-r--r--   1 fx185000 fx185000 1351686700 2017-06-20 12:07 /user/fx185000/file10GBSort/part-r-00003
+-rw-r--r--   1 fx185000 fx185000 1349054600 2017-06-20 12:07 /user/fx185000/file10GBSort/part-r-00004
+-rw-r--r--   1 fx185000 fx185000 1362285200 2017-06-20 12:07 /user/fx185000/file10GBSort/part-r-00005
+-rw-r--r--   1 fx185000 fx185000 1323142400 2017-06-20 12:07 /user/fx185000/file10GBSort/part-r-00006
+-rw-r--r--   1 fx185000 fx185000 1343984400 2017-06-20 12:07 /user/fx185000/file10GBSort/part-r-00007
+
 ```
