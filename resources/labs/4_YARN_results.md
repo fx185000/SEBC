@@ -1,4 +1,5 @@
 [fx185000@feng-xu-1 ~]$ ./YARNtest.sh 
+```
 Testing loop started on Tue Jun 20 16:49:38 PDT 2017
 1:  Mapper=1   Reducer=1  memory=512 start...
 
@@ -385,3 +386,4 @@ Deleted /user/fx185000/tg-10GB-8-8-1024
 Deleted /user/fx185000/ts-10GB-8-8-1024
 32: done!
 Testing loop ended on Tue Jun 20 18:22:47 PDT 2017
+```
