@@ -40,3 +40,42 @@ centos-updates       Local Mirror CentOS-6 - Updates                       1,370
 epel                 Extra Packages for Enterprise Linux 6 - x86_64       12,344
 repolist: 20,270
 ```
+#6.List the /etc/passwd entries for saturn and haley
+```
+feng.xu@Fengs-MacPro:~$ ./runall.sh "grep -E 'haley|saturn' /etc/passwd"
+commandline: ssh root@fx185000-1.vpc.cloudera.com grep -E 'haley|saturn' /etc/passwd ...
+haley:x:2900:2004::/home/haley:/bin/bash
+saturn:x:2800:2005::/home/saturn:/bin/bash
+commandline: ssh root@fx185000-2.vpc.cloudera.com grep -E 'haley|saturn' /etc/passwd ...
+haley:x:2900:2004::/home/haley:/bin/bash
+saturn:x:2800:2005::/home/saturn:/bin/bash
+commandline: ssh root@fx185000-3.vpc.cloudera.com grep -E 'haley|saturn' /etc/passwd ...
+haley:x:2900:2004::/home/haley:/bin/bash
+saturn:x:2800:2005::/home/saturn:/bin/bash
+commandline: ssh root@fx185000-4.vpc.cloudera.com grep -E 'haley|saturn' /etc/passwd ...
+haley:x:2900:2004::/home/haley:/bin/bash
+saturn:x:2800:2005::/home/saturn:/bin/bash
+commandline: ssh root@fx185000-5.vpc.cloudera.com grep -E 'haley|saturn' /etc/passwd ...
+haley:x:2900:2004::/home/haley:/bin/bash
+saturn:x:2800:2005::/home/saturn:/bin/bash
+```
+
+#7.List the /etc/group entries for comets and planets
+```
+feng.xu@Fengs-MacPro:~$ ./runall.sh "grep -E 'comets|planets' /etc/group"
+commandline: ssh root@fx185000-1.vpc.cloudera.com grep -E 'comets|planets' /etc/group ...
+comets:x:2004:
+planets:x:2005:
+commandline: ssh root@fx185000-2.vpc.cloudera.com grep -E 'comets|planets' /etc/group ...
+comets:x:2004:
+planets:x:2005:
+commandline: ssh root@fx185000-3.vpc.cloudera.com grep -E 'comets|planets' /etc/group ...
+comets:x:2004:
+planets:x:2005:
+commandline: ssh root@fx185000-4.vpc.cloudera.com grep -E 'comets|planets' /etc/group ...
+comets:x:2004:
+planets:x:2005:
+commandline: ssh root@fx185000-5.vpc.cloudera.com grep -E 'comets|planets' /etc/group ...
+comets:x:2004:
+planets:x:2005:
+```
